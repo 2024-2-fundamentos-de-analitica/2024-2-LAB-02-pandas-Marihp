@@ -29,7 +29,10 @@ def pregunta_12():
 
     df["c5"] = df["c5a"] + ":" + df["c5b"].astype(str)
     resultado = (
-        df.groupby("c0")["c4"].apply(lambda x: ",".join(sorted(x))).reset_index()
+        df.groupby("c0")["c5"].apply(lambda x: ",".join(sorted(x))).reset_index()
     )
 
     return resultado
+
+
+pregunta_12()
